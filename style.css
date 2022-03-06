@@ -195,13 +195,11 @@
 
   
   @media screen and (max-width: 1250px)  {
-    .blurb {
-      grid-area: blurb;
-      padding: 10vh;
-    }
-    
+   .blurb {
+    padding: 60px 5% 10% 40%;
+   }
     h1 {
-      font-size: 80px;
+      font-size: 70px;
       padding-bottom: 10px;
     }
   
@@ -210,7 +208,18 @@
     }  
   }
 
+  @media screen and (max-width: 1000px)  {
+    nav a { 
+      padding: 10px 20px;
+      margin: 5px;
+   }
+  }
+
+
   @media screen and (max-width: 850px)  {
+    .nav {
+      display: none;
+    }
     .blurb {
       grid-area: blurb;
       padding: 8vh;
@@ -223,17 +232,35 @@
   
     .blurb p {
       font-size: 20px;
-    }  
+    } 
+    .about-me,
+    .experience {
+      padding: 15%;
+    } 
+  }
+
+  @media screen and (max-width: 680px)  {
+    .about-me,
+    .experience {
+      padding: 10%;
+    }
+
+    .about-me-box {
+        display: grid;
+        grid-template-columns: 80%;
+      }  
+      .box {
+        grid-template-columns: 80%;
+  
+      }  
+
+
   }
 
   @media screen and (max-width: 500px)  {
-    .blurb {
-      grid-area: blurb;
-      padding: 10vh;
-    }
     
     h1 {
-      font-size: 40px;
+      font-size: 50px;
       padding-bottom: 10px;
     }
   
@@ -245,19 +272,9 @@
       font-size: 20px;
     }
 
-    .nav {
-      display: none;
-    }
 
-    .box {
-      grid-template-columns: 80%;
 
-    }
 
-    .about-me,
-    .experience {
-      padding: 10%;
-    }
   }
 
   @media screen and (max-width: 300px)  {
