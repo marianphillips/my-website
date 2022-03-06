@@ -1,3 +1,4 @@
+/*Across WHOLE page*/
 * {
     padding: 0;
     margin: 0;
@@ -8,6 +9,13 @@
   .line {
     border-top: black solid 5px;
   }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  /*Banger*/
   
   .intro {
     border-top: none;
@@ -25,6 +33,26 @@
     font-weight: bold;
     padding: 5px;
   }
+
+  .blurb {
+    grid-area: blurb;
+    padding: 80px 5% 10% 50%;
+  }
+  
+  h1 {
+    font-size: 10vh;
+    padding-bottom: 10px;
+  }
+  
+  .blurb p {
+    font-size: 3vh;
+  }
+  
+  .blurb u {
+    text-decoration-color: black;
+  }
+
+  /*NavBar*/
   
   .name {
     grid-area: name;
@@ -64,31 +92,13 @@
     grid-auto-flow: column;
   }
   
-  .blurb {
-    grid-area: blurb;
-    padding: 80px 5% 10% 50%;
-  }
-  
-  h1 {
-    font-size: 80px;
-    padding-bottom: 10px;
-  }
-  
-  .blurb p {
-    font-size: 30px;
-  }
-  
-  .blurb u {
-    text-decoration-color: black;
-  }
-  
+ 
+  /* About me and experience sections*/
   
   .about-me,
   .experience {
     padding: 50px 30% 60px 30%;
   }
-  /* BELOW: These had classes with their child selectors, 
-  this felt more succint but less specific, which is better? */
   
   h2, h4, p, ul, li {
     padding: 10px;
@@ -103,19 +113,17 @@
     height: 250px;
   }
 
-  .intro-box {
+  .about-me-box {
     display: grid;
     grid-template-columns: 80% 20%;
   }
 
-  .intro-box img {
+  .about-me-box img {
     border-radius: 10px;
   }
   
-  h2 {
-    text-align: center;
-    margin-bottom: 25px;
-  }
+
+  /*Portfolio Section*/
   
   .portfolio {
     display: grid;
@@ -183,20 +191,75 @@
     position: relative;
   }
 
+  /*Media Queries*/
 
   
   @media screen and (max-width: 1250px)  {
     .blurb {
       grid-area: blurb;
-      padding: 100px 20% 10% 20%;
+      padding: 10vh;
     }
     
     h1 {
-      font-size: 90px;
+      font-size: 80px;
       padding-bottom: 10px;
     }
   
     .blurb p {
       font-size: 25px;
     }  
+  }
+
+  @media screen and (max-width: 850px)  {
+    .blurb {
+      grid-area: blurb;
+      padding: 8vh;
+    }
+    
+    h1 {
+      font-size: 60px;
+      padding-bottom: 10px;
+    }
+  
+    .blurb p {
+      font-size: 20px;
+    }  
+  }
+
+  @media screen and (max-width: 500px)  {
+    .blurb {
+      grid-area: blurb;
+      padding: 10vh;
+    }
+    
+    h1 {
+      font-size: 40px;
+      padding-bottom: 10px;
+    }
+  
+    .blurb p {
+      font-size: 15px;
+    } 
+    
+    .name{
+      font-size: 20px;
+    }
+
+    .nav {
+      display: none;
+    }
+
+    .box {
+      grid-template-columns: 80%;
+
+    }
+
+    .about-me,
+    .experience {
+      padding: 10%;
+    }
+  }
+
+  @media screen and (max-width: 300px)  {
+
   }
