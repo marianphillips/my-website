@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <title>Marian Phillips</title>
+  </head>
+  <body>
+    <header class="intro">
+      <div class="name"><a href="../index.html">Marian Phillips</a></div>
+      <nav class="nav">
+        <ul>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="mailto:marian@marianphillips.co.uk">Contact</a></li>
+        </ul>
+      </nav>  
+      <nav class="nav-mobile">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav> 
+      <div id="nav-mobile-items">
+        <a class="icon" href="about.html">About Me</a><br />
+        <a class="icon" href="portfolio.html">Portfolio</a><br />
+        <a class="icon" href="mailto:marian@marianphillips.co.uk">Contact</a>
+      </div> 
+    </header>
+    <div class="about-me">
+      <div class="about-me-box">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            Hi! I am Marian, a budding Junior Full Stack Software Engineer. In
+            September 2021, I decided to make a career change and so I quit my
+            job as a Mathmetics Teacher and began my developer journey. I joined
+            a bootcamp (Boolean UK), where I went from the basics to being able
+            to develop my own full stack app. Please see my portfolio page for
+            more details.
+          </p>
+          <p>
+            In general, I love problem solving and being able to create stuff
+            from scratch. Equally, I love learning new things and being able to
+            apply my new-found skill sets to solve complex coding tasks. I am
+            currently learning Python so I can add this to my stack.
+          </p>
+          <p>
+            Outside of coding, I have many hobbies including netball, swimming,
+            climbing, cycling, skiing, travel, reading, film, cabaret/circus and
+            many more!
+          </p>
+        </div>
+      </div>
+
+      <div class="about-me-image">
+        <img src="../images/myself.jpg" alt="pw finder screenshot " />
+        <div>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/marian-phillips-48131955/"
+            ><span
+              class="iconify-inline"
+              data-icon="akar-icons:linkedin-fill"
+              style="color: orange"
+              data-width="48"
+              data-height="48"
+            ></span
+          ></a>
+          <a target="_blank" href="https://github.com/marianphillips"
+            ><span
+              class="iconify-inline"
+              data-icon="codicon:github"
+              style="color: orange"
+              data-width="48"
+              data-height="48"
+            ></span
+          ></a>
+          <a target="_blank" href="https://www.freecodecamp.org/marianphillips"
+            ><span
+              class="iconify-inline"
+              data-icon="fa:free-code-camp"
+              style="color: orange"
+              data-width="48"
+              data-height="48"
+            ></span
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.codewars.com/users/marianphillips"
+            ><span
+              class="iconify-inline"
+              data-icon="simple-icons:codewars"
+              style="color: orange"
+              data-width="48"
+              data-height="48"
+            ></span
+          ></a>
+          <p class="center">
+            <a href="../images/Resume.pdf" download>Download CV </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+      var x = document.getElementById("nav-mobile-items");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+  </body>
+</html>

@@ -2,41 +2,65 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
   }
-  
-  .line {
-    border-top: black solid 5px;
+
+  body {
+    color: #FFE715;
+    background-color: #101920;
+    display: grid;
+    grid-template-rows: 10vh minmax(85vh, auto);
   }
 
   h2 {
-    text-align: center;
     margin-bottom: 25px;
+    color: #FFE715;
+    font-size: 2.5rem;
   }
 
-  /*Banger*/
+  .portfolio h2 {
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FFE715;
+  }
+
+  .about-me,
+  .portfolio,
+  .blurb {
+    padding: 50px 10% 60px 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 4px solid #FFE715; 
+    border-radius: 20px;
+  }
+
+  /*Home*/
   
   .intro {
     border-top: none;
     display: grid;
     grid-template:
       "name nav" 75px
-      "blurb blurb" 100vh /
+      "nav-mobile nav-mobile" auto /
       auto 1fr;
-    background-image: url('/images/pexels-pixabay-273238.jpg');
-     height: 100vh; 
-     background-position: center; 
-      background-repeat: no-repeat; 
-      background-size: cover; 
-    color: black;
     font-weight: bold;
+    color: #FFE715;
     padding: 5px;
   }
 
   .blurb {
-    grid-area: blurb;
-    padding: 80px 5% 10% 50%;
+    padding: 10%;
   }
   
   h1 {
@@ -46,10 +70,6 @@
   
   .blurb p {
     font-size: 3vh;
-  }
-  
-  .blurb u {
-    text-decoration-color: black;
   }
 
   /*NavBar*/
@@ -64,23 +84,20 @@
   
   .nav {
     grid-area: nav;
-  
     display: grid;
     justify-items: flex-end;
     align-items: center;
   }
   
   nav a {
-    text-decoration: none;
     padding: 15px 30px;
     margin: 10px;
-    color: black;
     border-radius: 10px;
     border: transparent solid 3px;
   }
   
   nav a:hover {
-    border: black solid 3px;
+    border: #FFE715 solid 3px;
   }
   
   nav ul {
@@ -91,35 +108,77 @@
     gap: 5px;
     grid-auto-flow: column;
   }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  #nav-mobile-items {
+    display: none;
+    grid-area: nav-mobile;
+    margin-bottom: 2rem;
+  }
+
+  #nav-mobile-items a {
+    background-color: orange;
+    color: #101920;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+
+  }
+  
   
  
-  /* About me and experience sections*/
-  
-  .about-me,
-  .experience {
-    padding: 50px 30% 60px 30%;
+  /* About me and contact sections*/
+
+  .about-me {
+    display: grid; 
+    grid-template-columns: 1.3fr 1fr;
+    grid-gap: 3rem;
+  }
+
+  .about-me-image {
+    display:grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .about-me img {
+    border-radius: 50%;
+    width: 50%;
   }
   
   h2, h4, p, ul, li {
-    padding: 10px;
-  }
-  
-  .about-me ul {
-    list-style-position: inside;
-    column-count: 2;
-  }
-
-  .resume {
-    height: 250px;
+    padding-top: 10px;
   }
 
   .about-me-box {
     display: grid;
-    grid-template-columns: 80% 20%;
+    align-items: center;
   }
+
+  .about-me-box  p {
+    font-size: 2.7vh;
+  }
+
 
   .about-me-box img {
     border-radius: 10px;
+  }
+
+  .header-name {
+    color: orange;
+  }
+
+  svg, span {
+    margin: 0.5rem;
+    color: orange
+  }
+
+  .center {
+    text-align: center;
   }
   
 
@@ -128,84 +187,64 @@
   .portfolio {
     display: grid;
     grid-template:
-      "header" 60px
+      "header" 20px
       "box" auto /
       1fr;
     padding: 50px 10% 5% 10%;
+    grid-gap: 10%;
   }
   
   .box {
     grid-area: box;
     display: grid;
-    grid-template-columns: repeat( auto-fill, 40% );
+    grid-template-columns: repeat( auto-fill, 30% );
     justify-content: center;
     grid-gap: 5%;
   }
 
+ h5 {
+   text-align: center;
+   font-size: 2rem;
+   margin-bottom: 2rem;
+ }
   .image__project {
     display: block;
     width: 100%;
   }
 
-  .image__overlay {
-    position: absolute;
-    top:0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-
-  .image__overlay > * {
-    transform: translateY(25px);
-    transition: transform 0.5s
-  }
-
-  .image__overlay:hover {
-    opacity: 1;
-  }
-
-  .image__overlay:hover > * {
-    transform: translateY(0);
-  }
-
-  .image__overlay h5 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .image__overlay p {
-    font-size: 1rem;
-    margin: 10px;
-  }
-
   .project {
-    position: relative;
+    display: grid;
+    justify-items: center;
+    border: 4px solid #FFE715;
+    border-radius: 20px;
+    padding: 2rem;
+  }
+
+  .gitlink {
+    font-size: 1.7rem; 
+    margin-top: 1rem;
   }
 
   /*Media Queries*/
 
   
-  @media screen and (max-width: 1250px)  {
-   .blurb {
-    padding: 60px 5% 10% 40%;
-   }
-    h1 {
-      font-size: 70px;
-      padding-bottom: 10px;
-    }
-  
+  @media screen and (max-width: 1250px)  {  
     .blurb p {
       font-size: 25px;
     }  
+    .box {
+      grid-template-columns: repeat( auto-fill, 300px);
+      }
+
+      body {
+        grid-template-rows: auto 100%;
+       }
+       .portfolio {
+       grid-template:
+       "header" 1rem
+       "box" auto /
+       1fr;
+       }
   }
 
   @media screen and (max-width: 1000px)  {
@@ -213,70 +252,66 @@
       padding: 10px 20px;
       margin: 5px;
    }
+
+   .about-me {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
   }
 
+  .about-me,
+  .portfolio {
+    padding: 20px 6% 20px 6%;
+    margin: 1%;
+    grid-gap: 5%;
+  }
+
+
+  }
 
   @media screen and (max-width: 850px)  {
     .nav {
       display: none;
     }
-    .blurb {
-      grid-area: blurb;
-      padding: 8vh;
+
+    .nav-mobile {
+      display: grid;
+      justify-items: flex-end;
+      align-items: center;
     }
-    
+  }
+
+  @media screen and (max-width: 600px)  {
+    .portfolio {
+      border:none;
+    }
+    .name {
+      font-size: 1.5rem;
+    }
+
     h1 {
-      font-size: 60px;
-      padding-bottom: 10px;
+      font-size: 2.5rem;
     }
-  
+
+    h2 {
+      font-size: 1.7rem;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    .portfolio h5 {
+      font-size: 1.4rem;
+    }
+
+    .gitlink a  {
+      font-size: 1rem;
+    }
+
     .blurb p {
-      font-size: 20px;
-    } 
-    .about-me,
-    .experience {
-      padding: 15%;
-    } 
-  }
-
-  @media screen and (max-width: 680px)  {
-    .about-me,
-    .experience {
-      padding: 10%;
+      font-size: 1.2rem;
     }
 
-    .about-me-box {
-        display: grid;
-        grid-template-columns: 80%;
-      }  
-      .box {
-        grid-template-columns: 80%;
-  
-      }  
-
-
   }
 
-  @media screen and (max-width: 500px)  {
-    
-    h1 {
-      font-size: 50px;
-      padding-bottom: 10px;
-    }
-  
-    .blurb p {
-      font-size: 15px;
-    } 
-    
-    .name{
-      font-size: 20px;
-    }
 
-
-
-
-  }
-
-  @media screen and (max-width: 300px)  {
-
-  }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Marian Phillips</title>
+</head>
+<body>
+  <header class="intro">
+    <div class="name"><a href="../index.html">Marian Phillips</a></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="mailto:marian@marianphillips.co.uk">Contact</a></li>
+      </ul>
+    </nav>  
+    <nav class="nav-mobile">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav> 
+    <div id="nav-mobile-items">
+      <a class="icon" href="about.html">About Me</a><br />
+      <a class="icon" href="portfolio.html">Portfolio</a><br />
+      <a class="icon" href="mailto:marian@marianphillips.co.uk">Contact</a>
+    </div> 
+  </header>
+    <div id="portfolio" class="portfolio">
+        <div><h2>PORTFOLIO</h2></div>
+        <div class="box">
+        <div class="project">
+         <h5>Card Game</h5>
+          <img class="image__project" src="../images/CardGame2.PNG" alt="card game screenshot">
+          <div class="gitlink"><a target="_blank" href="https://github.com/marianphillips/build-week-cards">Github</a></div>
+          <div class="gitlink"><a target="_blank" href="https://card-game-oh-hell.netlify.app/">Link</a></div>
+        </div>
+        <div class="project">
+        <h5>Pacific Wines Finder</h5>
+          <img class="image__project" src="../images/pw-readme.PNG" alt="pw finder screenshot ">
+          <div class="gitlink"><a target="_blank" href="https://github.com/marianphillips/solo-project-server">Github</a></div>
+          <div class="gitlink"><a target="_blank" href="https://pw-finder.netlify.app/">Link</a></div>
+        </div>
+        <div class="project">
+            <h5>Greengrocers</h5>
+              <img class="image__project" src="../images/Greengrocers.PNG" alt="pw finder screenshot ">
+              <div class="gitlink"><a target="_blank" href="https://github.com/marianphillips/boolean-uk-react-greengrocers">Github</a></div>
+              <div class="gitlink"><a target="_blank" href="https://gleeful-croissant-4b17a3.netlify.app/">Link</a></div>
+            </div>
+        </div>
+      </div>
+      <script>
+        function myFunction() {
+        var x = document.getElementById("nav-mobile-items");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      </script>
+</body>
+</html>
